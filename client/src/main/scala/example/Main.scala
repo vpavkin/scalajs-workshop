@@ -17,7 +17,7 @@ object Main extends js.JSApp {
 
       (removeTrailingSlashes
       | staticRoute(root, Page.Home)                                      ~> renderR(ctl => HomePage.component(ctl))
-      | dynamicRouteCT((root / "photo" / photoId).caseClass[Page.Photo])  ~> dynRenderR((p, ctl) => <.div(s"TODO - Photo page for $p goes here"))
+      | dynamicRouteCT[Page.Photo]((root / "photo" / photoId).caseClass[Page.Photo])  ~> dynRenderR((p, ctl) => <.div(s"TODO - Photo page for ${p.id} goes here"))
       )
       .notFound { x =>
         dom.console.error(s"Page not found: $x")
