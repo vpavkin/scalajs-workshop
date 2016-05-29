@@ -23,7 +23,9 @@ lazy val client = (project in file("client")).settings(
   libraryDependencies ++= Seq(
     "org.scala-js" %%% "scalajs-dom" % "0.9.0",
     "com.github.japgolly.scalajs-react" %%% "core" % "0.11.1",
-    "com.github.japgolly.scalajs-react" %%% "extra" % "0.11.1"
+    "com.github.japgolly.scalajs-react" %%% "extra" % "0.11.1",
+    "com.github.japgolly.scalacss" %%% "core" % "0.4.1",
+    "com.github.japgolly.scalacss" %%% "ext-react" % "0.4.1"
   ),
   jsDependencies ++= Seq(
     "org.webjars.bower" % "react" % "15.0.2"
