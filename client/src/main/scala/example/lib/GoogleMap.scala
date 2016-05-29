@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.JSName
 
 @js.native
 @JSName("google.maps.Map")
-class GoogleMap(node: Element, options: js.Dynamic) extends js.Object
+class GoogleMap(node: Element, options: js.Dynamic = js.Dynamic.literal()) extends js.Object
